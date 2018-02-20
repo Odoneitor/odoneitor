@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+        <!-- window action -->
+        <!--
+            The following tag is an action definition for a "window action",
+            that is an action opening a view or a set of views
+        -->
+        <record model="ir.actions.act_window" id="lang_list_action">
+            <field name="name">Languages</field>
+            <field name="res_model">softonic.language</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                Create the first programming language
+                </p>
+            </field>
+        </record>
+        <!-- top level menu: no parent -->
+        <menuitem id="main_softonic_menu" name="SOFTONIC"/>
+        <!-- A first level in the left side menu is needed
+             before using action= attribute -->
+        <menuitem id="softonic_menu" name="SOFTONIC"
+                  parent="main_softonic_menu"/>
+        <!-- the following menuitem should appear *after*
+             its parent softonic_menu and *after* its
+             action course_list_action -->
+        <menuitem id="langs_menu" name="Languages" parent="softonic_menu"
+                  action="lang_list_action"/>
+        <!-- Full id location:
+             action="softonic.course_list_action"
+             It is not required when it is the same module -->
+
+
+</odoo>
