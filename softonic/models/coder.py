@@ -1,3 +1,7 @@
+# -*- coding: utf-8 -*-
+
+from odoo import models, fields, api
+
 class Coder(models.Model):
     _name    = 'softonic.coder'
     name     = fields.Char(string='Name', required=True, help='Name of the coder...')
