@@ -30,6 +30,18 @@
             </field>
         </record>
 
+        <record model="ir.actions.act_window" id="team_list_action">
+            <field name="name">Teams</field>
+            <field name="res_model">softonic.team</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create
+                </p>
+            </field>
+        </record>
+
         <!-- top level menu: no parent -->
         <menuitem id="main_softonic_menu" name="Softonic"/>
         <!-- A first level in the left side menu is needed
@@ -39,13 +51,12 @@
         <!-- the following menuitem should appear *after*
              its parent openacademy_menu and *after* its
              action course_list_action -->
-        <menuitem id="language_menu" name="language" parent="softonic_menu"
+        <menuitem id="language_menu" name="Language" parent="softonic_menu"
                   action="lang_list_action"/>
-        <!-- the following menuitem should appear *after*
-             its parent openacademy_menu and *after* its
-             action course_list_action -->
-        <menuitem id="client_menu" name="client" parent="softonic_menu"
+        <menuitem id="client_menu" name="Client" parent="softonic_menu"
                   action="client_list_action"/>
+        <menuitem id="team_menu" name="Team" parent="softonic_menu"
+                  action="team_list_action"/>          
         <!-- Full id location:
              action="openacademy.course_list_action"
              It is not required when it is the same module -->
