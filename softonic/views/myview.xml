@@ -18,7 +18,7 @@
             </field>
         </record>
 
-        <record model="ir.actions.act_window" id="client_list_action">
+        <record model="ir.actions.act_window" id="lang_list_action">
             <field name="name">Clients</field>
             <field name="res_model">softonic.client</field>
             <field name="view_type">form</field>
@@ -41,10 +41,16 @@
              action course_list_action -->
         <menuitem id="language_menu" name="language" parent="softonic_menu"
                   action="lang_list_action"/>
+        <!-- Full id location:
+             action="openacademy.course_list_action"
+             It is not required when it is the same module -->
+
+        <menuitem id="softonic_menu" name="Clientes"
+                  parent="main_softonic_menu"/>
         <!-- the following menuitem should appear *after*
              its parent openacademy_menu and *after* its
              action course_list_action -->
-        <menuitem id="client_menu" name="client" parent="softonic_menu"
+        <menuitem id="clien_menu" name="cliente" parent="softonic_menu"
                   action="client_list_action"/>
         <!-- Full id location:
              action="openacademy.course_list_action"

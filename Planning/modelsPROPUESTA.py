@@ -1,3 +1,6 @@
+
+from odoo import models, fields, api, exceptions
+
 """
 Clase que representa un cliente
 Campos:
