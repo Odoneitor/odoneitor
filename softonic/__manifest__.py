@@ -2,34 +2,22 @@
 {
     'name': "softonic",
 
-    'summary': """
-        Try to pass Gorka II""",
+    'summary':
+    """
+        Intentando aprobar la asignatura de Gorka II
+    """,
 
-    'description': """
-        Please I wannt to go to the enterprise
+    'description':
+    """
+        Por favor, queremos ir a la empresa
     """,
 
     'author': "Odoneitor TEAM",
     'website': "http://www.yourcompany.com",
-
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/master/odoo/addons/base/module/module_data.xml
-    # for the full list
-    'category': 'Uncategorized',
-    'version': '0.1',
-
-    # any module necessary for this one to work correctly
+	'category': 'rubricaza',
+    'version': '1.0',
     'depends': ['base'],
-
-    # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
-        'views/softonic.xml',
-    ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
+        'views/main.xml',
     ],
 }

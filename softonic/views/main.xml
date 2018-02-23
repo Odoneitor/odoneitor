@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- ================================================================================================ -->
+    <!-- =====================================  MODELOS    ============================================== -->
+    <!-- ================================================================================================ -->
+    <!-- Client -->
+    <record model="ir.actions.act_window" id="client_list_action">
+        <field name = "name">Cliente</field>
+        <field name = "res_model">softonic.client</field>
+        <field name = "view_type">form</field>
+        <field name = "view_mode">tree,form</field>
+        <field name = "help" type= "html">
+            <p class="oe_view_nocontent_create">Insertar entidades</p>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="client_form_view">
+        <field name="name">client.form</field>
+        <field name="model">softonic.client</field>
+        <field name="arch" type="xml">
+            <form string = 'Client Form'>
+                <label for="name" string="Insert a client:" />
+                <field name="name"/>
+            </form>
+        </field>
+    </record>
+    <record model='ir.ui.view' id='client_tree_view'>
+        <field name="name">client.tree</field>
+        <field name="model">softonic.client</field>
+        <field name="arch" type="xml">
+            <tree string="Client Tree">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <!-- Coder -->
+    <record model="ir.actions.act_window" id="coder_list_action">
+        <field name = "name">Coder</field>
+        <field name = "res_model">softonic.coder</field>
+        <field name = "view_type">form</field>
+        <field name = "view_mode">tree,form</field>
+        <field name = "help" type= "html">
+            <p class="oe_view_nocontent_create">Insertar entidades</p>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="coder_form_view">
+        <field name="name">coder.form</field>
+        <field name="model">softonic.coder</field>
+        <field name="arch" type="xml">
+            <form string = 'Coder Form'>
+                <label for="name" string="Coder's Name:" />
+                <field name="name"/>
+                <label for="lastname" string="Coder's lastname:" />
+                <field name="lastname"/>
+                <label for="birthDate" string="Coder's date of birth:" />
+                <field name="birthDate"/>
+                <label for="joinDate" string="Coder's join date:" />
+                <field name="joinDate"/>
+            </form>
+        </field>
+    </record>
+    <record model='ir.ui.view' id='coder_tree_view'>
+        <field name="name">coder.tree</field>
+        <field name="model">softonic.coder</field>
+        <field name="arch" type="xml">
+            <tree string="coder Tree">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <!-- Language -->
+    <record model="ir.actions.act_window" id="language_list_action">
+        <field name = "name">Language</field>
+        <field name = "res_model">softonic.language</field>
+        <field name = "view_type">form</field>
+        <field name = "view_mode">tree,form</field>
+        <field name = "help" type= "html">
+            <p class="oe_view_nocontent_create">Insertar entidades</p>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="language_form_view">
+        <field name="name">language.form</field>
+        <field name="model">softonic.language</field>
+        <field name="arch" type="xml">
+            <form string = 'language Form'>
+                <label for="name" string="Insert a language:" />
+                <field name="name"/>
+                <label for="typeOfLanguage" string="Select it's type:" />
+                <field name="typeOfLanguage"/>
+            </form>
+        </field>
+    </record>
+    <record model='ir.ui.view' id='language_tree_view'>
+        <field name="name">language.tree</field>
+        <field name="model">softonic.language</field>
+        <field name="arch" type="xml">
+            <tree string="language Tree">
+                <field name="name"/>
+                <field name="typeOfLanguage" />
+            </tree>
+        </field>
+    </record>
+        <!-- Coder -->
+    <record model="ir.actions.act_window" id="coder_list_action">
+        <field name = "name">Coder</field>
+        <field name = "res_model">softonic.coder</field>
+        <field name = "view_type">form</field>
+        <field name = "view_mode">tree,form</field>
+        <field name = "help" type= "html">
+            <p class="oe_view_nocontent_create">Insertar entidades</p>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="coder_form_view">
+        <field name="name">coder.form</field>
+        <field name="model">softonic.coder</field>
+        <field name="arch" type="xml">
+            <form string = 'Coder Form'>
+                <label for="name" string="Coder's Name:" />
+                <field name="name"/>
+                <label for="lastname" string="Coder's lastname:" />
+                <field name="lastname"/>
+                <label for="birthDate" string="Coder's date of birth:" />
+                <field name="birthDate"/>
+                <label for="joinDate" string="Coder's join date:" />
+                <field name="joinDate"/>
+            </form>
+        </field>
+    </record>
+    <record model='ir.ui.view' id='coder_tree_view'>
+        <field name="name">coder.tree</field>
+        <field name="model">softonic.coder</field>
+        <field name="arch" type="xml">
+            <tree string="coder Tree">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <!-- Proyect -->
+    <record model="ir.actions.act_window" id="proyect_list_action">
+        <field name = "name">Proyect</field>
+        <field name = "res_model">softonic.proyect</field>
+        <field name = "view_type">form</field>
+        <field name = "view_mode">tree,form</field>
+        <field name = "help" type= "html">
+            <p class="oe_view_nocontent_create">Insertar entidades</p>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="proyect_form_view">
+        <field name="name">proyect.form</field>
+        <field name="model">softonic.proyect</field>
+        <field name="arch" type="xml">
+            <form string = 'proyect Form'>
+                <label for="name" string="Insert a proyect:" />
+                <field name="name"/>
+            </form>
+        </field>
+    </record>
+    <record model='ir.ui.view' id='proyect_tree_view'>
+        <field name="name">proyect.tree</field>
+        <field name="model">softonic.proyect</field>
+        <field name="arch" type="xml">
+            <tree string="proyect Tree">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <!-- ================================================================================================ -->
+    <!-- =====================================    MENUS    ============================================== -->
+    <!-- ================================================================================================ -->
+    <menuitem id="softonic_root" name="Softonic"/>
+    <menuitem id="softonic_base" name="Modulo Softonic" parent = "softonic_root"/>
+    <menuitem id="client_menu" name="Client" parent = "softonic_base" action = "client_list_action"/>
+    <menuitem id="coder_menu" name="Coder" parent = "softonic_base" action = "coder_list_action"/>
+    <menuitem id="language_menu" name="Language" parent = "softonic_base" action = "language_list_action"/>
+    <menuitem id="proyect_menu" name="Proyect" parent = "softonic_base" action = "proyect_list_action"/>
+</odoo>
