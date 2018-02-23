@@ -34,8 +34,10 @@ class Language(models.Model):
     _name = 'softonic.language'
     name = fields.Char(string='Name', required=True,
                        help='Name of the language...')
-    typeOfLanguage = fields.Char(string='Type', required=False, help='Additional info')
-    #typeOfLanguage = fields.Selection(selection_add=[('oop', 'Orientado a objetos'), ('fp', 'Funcional'), ('struct', 'Estructurado')])
+    # http://odoo-new-api-guide-line.readthedocs.io/en/latest/fields.html
+    # !! CUIDADO !!
+    # La documentación parece haberla escrito un **puto mono**, así que está mal!
+    typeOfLanguage = type = fields.Selection(selection=[('oop', 'Orientado a objetos'), ('fp', 'Funcional')])
     # Un lenguaje de programación se usa en varios proyectos
     # proyects_ids = fields.Many2many('softonic.proyect', string="Proyects")
     # Un lenguaje es conocido por varios programadores
