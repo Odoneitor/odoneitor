@@ -89,6 +89,8 @@
                 <field name="name"/>
                 <label for="typeOfLanguage" string="Select it's type:" />
                 <field name="typeOfLanguage"/>
+                <label for="coders_ids" string="Known pr0s:" />
+                <field name="coders_ids"/>
             </form>
         </field>
     </record>
@@ -99,6 +101,7 @@
             <tree string="language Tree">
                 <field name="name"/>
                 <field name="typeOfLanguage" />
+                <field name="coders_ids"/>
             </tree>
         </field>
     </record>
@@ -125,6 +128,8 @@
                 <field name="birthDate"/>
                 <label for="joinDate" string="Coder's join date:" />
                 <field name="joinDate"/>
+                <label for="langs_ids" string="Coder's programming languages:" />
+                <field name="langs_ids"/>
             </form>
         </field>
     </record>
@@ -134,6 +139,7 @@
         <field name="arch" type="xml">
             <tree string="coder Tree">
                 <field name="name"/>
+                <field name="langs_ids"/>
             </tree>
         </field>
     </record>
