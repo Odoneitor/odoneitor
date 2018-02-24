@@ -27,9 +27,9 @@ class Coder(models.Model):
 
     """
     # Relación con la tabla intermedia -> una lista de sus colaboraciones
-    relatedTeams_ids = fields.one2Many(
-        'softonic.team', 'coder_id', string="Collaborations")
-    """
+    relatedTeams_ids = fields.Many2many(
+        'softonic.team', 'coders_ids', string="Collaborations")
+
 
 
 class Language(models.Model):
@@ -44,7 +44,7 @@ class Language(models.Model):
         selection=[('oop', 'Orientado a objetos'), ('fp', 'Funcional')])
 
     # Un lenguaje de programación se usa en varios proyectos
-    # proyects_ids = fields.Many2many('softonic.proyect', string="Proyects")
+    proyects_ids = fields.Many2many('softonic.proyect', string="Proyects")
     # Un lenguaje es conocido por varios programadores
     coders_ids = fields.Many2many('softonic.coder', string="Associated Pr0s")
 
@@ -57,20 +57,20 @@ class Proyect(models.Model):
     client_id = fields.Many2one(
         'softonic.client', ondelete='set null', string="Clients", index=True)
     # Un proyecto involucra varios lenguajes de programación
-    # langs_ids = fields.Many2many('softonic.language', string="Technologies used")
+    langs_ids = fields.Many2many('softonic.language', string="Technologies used")
     # Relación con la tabla intermedia -> una lista de sus colaboraciones
-    # relatedTeams_ids = fields.one2Many('softonic.team', 'proyect_id', string="Collaborations")
+    relatedTeams_ids = fields.One2many('softonic.team', 'proyect_id', string="Collaborations")
 
 
 class Team(models.Model):
     _name = 'softonic.team'
-    position = fields.Char(string='Position', required=True,
-                           help='Programmer\'s position inside of the team...')
+    name = fields.Char(string='name', required=True,
+                           help='Name of the team')
     hours = fields.Float(digits=(6, 2), required=False,
                          help='Assigned hours...')
     # En el equipo debe haber una referencia al programador
-    # coder_id = fields.Many2one('softonic.coder',
-    #    ondelete='set null', string="Coder", index=True)
+    coders_ids = fields.Many2many('softonic.coder',
+        ondelete='set null', string="Coder", index=True)
     # En el equipo debe haber una referencia al proyecto
-    # proyect_id = fields.Many2one('softonic.proyect',
-    #    ondelete='set null', string="Proyect", index=True)
+    proyect_id = fields.Many2one('softonic.proyect',
+        ondelete='set null', string="Proyect", index=True)

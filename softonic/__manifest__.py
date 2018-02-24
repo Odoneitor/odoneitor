@@ -4,16 +4,16 @@
 
     'summary':
     """
-        Intentando aprobar la asignatura de Gorka II
+        An odoo module fully developed in Salesianos Zaragoza
     """,
 
     'description':
     """
-        Por favor, queremos ir a la empresa
+        Buenos, Buenos, modulooss !!!
     """,
 
     'author': "Odoneitor TEAM",
-    'website': "http://www.yourcompany.com",
+    'website': "http://www.marca.com",
 	'category': 'rubricaza',
     'version': '1.0',
     'depends': ['base'],
