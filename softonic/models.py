@@ -24,6 +24,8 @@ class Coder(models.Model):
     # Un programador conoce varios lenguajes de programación
     langs_ids = fields.Many2many(
         'softonic.language', string="Known Programming Languages")
+
+    """
     # Relación con la tabla intermedia -> una lista de sus colaboraciones
     relatedTeams_ids = fields.Many2many(
         'softonic.team', 'coders_ids', string="Collaborations")
@@ -34,11 +36,13 @@ class Language(models.Model):
     _name = 'softonic.language'
     name = fields.Char(string='Name', required=True,
                        help='Name of the language...')
+
     # http://odoo-new-api-guide-line.readthedocs.io/en/latest/fields.html
     # !! CUIDADO !!
     # La documentación parece haberla escrito un **puto mono**, así que está mal!
     typeOfLanguage = type = fields.Selection(
         selection=[('oop', 'Orientado a objetos'), ('fp', 'Funcional')])
+
     # Un lenguaje de programación se usa en varios proyectos
     proyects_ids = fields.Many2many('softonic.proyect', string="Proyects")
     # Un lenguaje es conocido por varios programadores

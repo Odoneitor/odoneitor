@@ -93,7 +93,7 @@
                 <label for="coders_ids" string="Coders: " />
                 <field name="coders_ids"/>
                 <label for="proyects_ids" string="Proyects: " />
-                <field name="proyects_ids"/>
+                <field name="proyects_ids/>
             </form>
         </field>
     </record>
@@ -104,6 +104,7 @@
             <tree string="language Tree">
                 <field name="name"/>
                 <field name="typeOfLanguage" />
+                <field name="coders_ids"/>
             </tree>
         </field>
     </record>
@@ -134,6 +135,7 @@
                 <field name="langs_ids"/>
                 <label for="relatedTeams_ids" string="Teams: " />
                 <field name="relatedTeams_ids"/>
+
             </form>
         </field>
     </record>
@@ -143,6 +145,7 @@
         <field name="arch" type="xml">
             <tree string="coder Tree">
                 <field name="name"/>
+                <field name="langs_ids"/>
             </tree>
         </field>
     </record>
