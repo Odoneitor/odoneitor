@@ -20,6 +20,8 @@
             <form string = 'Client Form'>
                 <label for="name" string="Insert a client:" />
                 <field name="name"/>
+                <label for="relatedProyects_ids" string="Proyects:" />
+                <field name="relatedProyects_ids"/>
             </form>
         </field>
     </record>
@@ -29,6 +31,7 @@
         <field name="arch" type="xml">
             <tree string="Client Tree">
                 <field name="name"/>
+                <field name="relatedProyects_ids" />
             </tree>
         </field>
     </record>
@@ -99,7 +102,7 @@
             </tree>
         </field>
     </record>
-        <!-- Coder -->
+    <!-- Coder -->
     <record model="ir.actions.act_window" id="coder_list_action">
         <field name = "name">Coder</field>
         <field name = "res_model">softonic.coder</field>
@@ -151,6 +154,8 @@
             <form string = 'proyect Form'>
                 <label for="name" string="Insert a proyect:" />
                 <field name="name"/>
+                <label for="client_id" string="Clients:" />
+                <field name="client_id" />
             </form>
         </field>
     </record>
@@ -160,6 +165,7 @@
         <field name="arch" type="xml">
             <tree string="proyect Tree">
                 <field name="name"/>
+                <field name="client_id" />
             </tree>
         </field>
     </record>

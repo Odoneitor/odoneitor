@@ -8,7 +8,8 @@ class Client(models.Model):
     name = fields.Char(string='Name', required=True,
                        help='Name of the client...')
     # Un cliente contiene una lista de sus proyectos
-    # relatedProyects_ids = fields.one2Many('softonic.proyect', 'client_id', string="Associated proyects")
+    relatedProyects_ids = fields.One2many(
+        'softonic.proyect', 'client_id', string="Proyects")
 
 
 class Coder(models.Model):
@@ -37,7 +38,8 @@ class Language(models.Model):
     # http://odoo-new-api-guide-line.readthedocs.io/en/latest/fields.html
     # !! CUIDADO !!
     # La documentación parece haberla escrito un **puto mono**, así que está mal!
-    typeOfLanguage = type = fields.Selection(selection=[('oop', 'Orientado a objetos'), ('fp', 'Funcional')])
+    typeOfLanguage = type = fields.Selection(
+        selection=[('oop', 'Orientado a objetos'), ('fp', 'Funcional')])
     # Un lenguaje de programación se usa en varios proyectos
     # proyects_ids = fields.Many2many('softonic.proyect', string="Proyects")
     # Un lenguaje es conocido por varios programadores
@@ -49,8 +51,8 @@ class Proyect(models.Model):
     name = fields.Char(string='Name', required=True,
                        help='Name of the proyect...')
     # Un proyecto lleva una referencia a su cliente
-    # client_id = fields.Many2one('softonic.client',
-    #    ondelete='set null', string="Client", index=True)
+    client_id = fields.Many2one(
+        'softonic.client', ondelete='set null', string="Clients", index=True)
     # Un proyecto involucra varios lenguajes de programación
     # langs_ids = fields.Many2many('softonic.language', string="Technologies used")
     # Relación con la tabla intermedia -> una lista de sus colaboraciones
