@@ -93,7 +93,7 @@
                 <label for="coders_ids" string="Coders: " />
                 <field name="coders_ids"/>
                 <label for="proyects_ids" string="Proyects: " />
-                <field name="proyects_ids/>
+                <field name="proyects_ids"/>
             </form>
         </field>
     </record>

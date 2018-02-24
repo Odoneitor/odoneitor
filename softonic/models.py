@@ -25,7 +25,6 @@ class Coder(models.Model):
     langs_ids = fields.Many2many(
         'softonic.language', string="Known Programming Languages")
 
-    """
     # Relación con la tabla intermedia -> una lista de sus colaboraciones
     relatedTeams_ids = fields.Many2many(
         'softonic.team', 'coders_ids', string="Collaborations")
