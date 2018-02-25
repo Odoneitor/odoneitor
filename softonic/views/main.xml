@@ -150,7 +150,7 @@
         </field>
     </record>
      <!-- Team -->
-    <record model="ir.actions.act_window" id="team_list_action">
+    <record model="ir.actions.act_window" id="teamson_list_action">
         <field name = "name">Team</field>
         <field name = "res_model">team.team</field>
         <field name = "view_type">form</field>
@@ -159,7 +159,7 @@
             <p class="oe_view_nocontent_create">Insertar entidades</p>
         </field>
     </record>
-    <record model="ir.ui.view" id="team_form_view">
+    <record model="ir.ui.view" id="teamson_form_view">
         <field name="name">team.form</field>
         <field name="model">team.team</field>
         <field name="inherit_id" ref="team.team_form_view"/>
@@ -172,7 +172,7 @@
             </xpath>       
         </field>
     </record>
-    <record model='ir.ui.view' id='proyect_tree_view'>
+    <record model='ir.ui.view' id='teamson_tree_view'>
         <field name="name">team.tree</field>
         <field name="model">team.team</field>
         <field name="arch" type="xml">
@@ -191,5 +191,5 @@
     <menuitem id="coder_menu" name="Coder" parent = "softonic_base" action = "coder_list_action"/>
     <menuitem id="language_menu" name="Language" parent = "softonic_base" action = "language_list_action"/>
     <menuitem id="proyect_menu" name="Proyect" parent = "softonic_base" action = "proyect_list_action"/>
-    <menuitem id="team_menu" name="Team" parent = "softonic_base" action = "team_list_action"/>¡
+    <menuitem id="team_menu" name="Team" parent = "softonic_base" action = "teamson_list_action"/>¡
 </odoo>
