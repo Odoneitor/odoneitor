@@ -60,7 +60,7 @@ class Proyect(models.Model):
 
     # Relación con la tabla intermedia -> una lista de sus colaboraciones
     relatedTeams_ids = fields.One2many(
-        'softonic.team', 'proyect_id', string="Collaborations")
+        'team.team', 'proyect_id', string="Collaborations")
 
 class Team(models.Model):
     _inherit = 'team.team'
