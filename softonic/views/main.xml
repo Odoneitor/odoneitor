@@ -162,8 +162,9 @@
     <record model="ir.ui.view" id="team_form_view">
         <field name="name">team.form</field>
         <field name="model">team.team</field>
+        <field name="inherit_id" ref="team.team_form_view"/>
         <field name="arch" type="xml">
-            <form string = 'team Form'>
+        <xpath expr="//field[@name='hours']" position="after">
                 <label for="coders_ids" string="Coders: " />
                 <field name="coders_ids" />
                 <label for="proyect_id" string="Proyect: " />

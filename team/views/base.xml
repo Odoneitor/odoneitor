@@ -10,7 +10,7 @@
             </field>
         </record>
         
-        <record model="ir.ui.view" id="entidad_form_view">
+        <record model="ir.ui.view" id="team_form_view">
             <field name="name">team.form</field>
             <field name="model">team.team</field>    
             <field name="arch" type="xml">
@@ -21,7 +21,7 @@
             </field>
         </record>
         
-        <record model='ir.ui.view' id='entidad_tree_view'>
+        <record model='ir.ui.view' id='team_tree_view'>
             <field name="name">team.tree</field>
             <field name="model">team.team</field>
             <field name="arch" type="xml">
