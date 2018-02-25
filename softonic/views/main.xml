@@ -135,6 +135,8 @@
                 <field name="client_id" />
                 <label for="langs_ids" string="Languages:" />
                 <field name="langs_ids" />
+                <label for="team_ids" string="Coders: ">
+                <field name="team_ids">
             </form>
         </field>
     </record>

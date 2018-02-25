@@ -57,6 +57,8 @@ class Proyect(models.Model):
     # Un proyecto involucra varios lenguajes de programación
     langs_ids = fields.Many2many(
         'softonic.language', string="Technologies used")
+    #En vez de la tabla intermedia, generarla con herramientas de odoo
+    team_ids = fields.Many2many('softonic.coder',relation='teams', column1='proyect_id',column2='coder_id', string="Teams")
 
 """
     # Relación con la tabla intermedia -> una lista de sus colaboraciones
