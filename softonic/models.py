@@ -59,7 +59,7 @@ class Proyect(models.Model):
         'softonic.language', string="Technologies used")
 
     # Relación con la tabla intermedia -> una lista de sus colaboraciones
-    relatedTeams_ids = fields.one2Many(
+    relatedTeams_ids = fields.One2many(
         'softonic.team', 'proyect_id', string="Collaborations")
 
 class Team(models.Model):
