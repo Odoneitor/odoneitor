@@ -164,11 +164,12 @@
         <field name="model">team.team</field>
         <field name="inherit_id" ref="team.team_form_view"/>
         <field name="arch" type="xml">
-        <xpath expr="//field[@name='hours']" position="after">
-                <label for="coders_ids" string="Coders: " />
-                <field name="coders_ids" />
-                <label for="proyect_id" string="Proyect: " />
-                <field name="proyect_id" />
+                <xpath expr="//field[@name='hours']" position="after">
+                    <label for="coders_ids" string="Coders: " />
+                    <field name="coders_ids" />
+                    <label for="proyect_id" string="Proyect: " />
+                    <field name="proyect_id" />
+                </xpath>        
             </form>
         </field>
     </record>
