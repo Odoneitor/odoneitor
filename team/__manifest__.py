@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "baseModule",
+    'name': "team",
 
     'summary': """
         modulo base""",
