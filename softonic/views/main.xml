@@ -18,9 +18,9 @@
         <field name="model">softonic.client</field>
         <field name="arch" type="xml">
             <form string = 'Client Form'>
-                <label for="name" string="Insert a client:" />
+                <label for="name" string="Insert a client: " />
                 <field name="name"/>
-                <label for="relatedProyects_ids" string="Proyects:" />
+                <label for="relatedProyects_ids" string="Proyects: " />
                 <field name="relatedProyects_ids"/>
             </form>
         </field>
@@ -52,13 +52,13 @@
             <form string = 'Coder Form'>
                 <label for="name" string="Coder's Name:" />
                 <field name="name"/>
-                <label for="lastname" string="Coder's lastname:" />
+                <label for="lastname" string="Coder's lastname: " />
                 <field name="lastname"/>
-                <label for="birthDate" string="Coder's date of birth:" />
+                <label for="birthDate" string="Coder's date of birth: " />
                 <field name="birthDate"/>
-                <label for="joinDate" string="Coder's join date:" />
+                <label for="joinDate" string="Coder's join date: " />
                 <field name="joinDate"/>
-                <label for="langs_ids" string="Languages skilled in:" />
+                <label for="langs_ids" string="Languages skilled in: " />
                 <field name="langs_ids"/>
             </form>
         </field>
@@ -91,13 +91,13 @@
         <field name="model">softonic.language</field>
         <field name="arch" type="xml">
             <form string = 'language Form'>
-                <label for="name" string="Insert a language:" />
+                <label for="name" string="Insert a language: " />
                 <field name="name"/>
-                <label for="typeOfLanguage" string="Select it's type:" />
+                <label for="typeOfLanguage" string="Select it's type: " />
                 <field name="typeOfLanguage"/>
-                <label for="coders_ids" string="Known pr0s:" />
+                <label for="coders_ids" string="Known pr0s: " />
                 <field name="coders_ids"/>
-                <label for="proyects_ids" string="Proyects used in:" />
+                <label for="proyects_ids" string="Proyects used in: " />
                 <field name="proyects_ids"/>
             </form>
         </field>
@@ -131,9 +131,9 @@
             <form string = 'proyect Form'>
                 <label for="name" string="Insert a proyect:" />
                 <field name="name"/>
-                <label for="client_id" string="Clients:" />
+                <label for="client_id" string="Clients: " />
                 <field name="client_id" />
-                <label for="langs_ids" string="Languages:" />
+                <label for="langs_ids" string="Languages: " />
                 <field name="langs_ids" />
             </form>
         </field>
