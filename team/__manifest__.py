@@ -3,13 +3,13 @@
     'name': "team",
 
     'summary': """
-        modulo base""",
+        modulo herencia""",
 
     'description': """
-        Modulo base para examenes
+        Modulo para trabajo odoo
     """,
 
-    'author': "Gorka Sanz",
+    'author': "Qazeke",
     'website': "https://zaragoza.salesianos.edu/",
     'category': 'examen',
     'version': '1.0',
