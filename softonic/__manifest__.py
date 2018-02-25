@@ -16,7 +16,7 @@
     'website': "http://www.yourcompany.com",
 	'category': 'rubricaza',
     'version': '1.0',
-    'depends': ['base'],
+    'depends': ['base','team'],
     'data': [
         'views/main.xml',
     ],
