@@ -62,6 +62,9 @@ class Proyect(models.Model):
     relatedTeams_ids = fields.One2many(
         'team.team', 'proyect_id', string="Collaborations")
 
+    fecha_inicio = fields.Date(default=lambda self: fields.datetime.now())
+    fecha_fin = fields.Date(string='Fecha fin', required=True)
+
 class Team(models.Model):
     _inherit = 'team.team'
     # En el equipo debe haber una referencia al programador

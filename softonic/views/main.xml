@@ -119,7 +119,7 @@
         <field name = "name">Proyect</field>
         <field name = "res_model">softonic.proyect</field>
         <field name = "view_type">form</field>
-        <field name = "view_mode">tree,form</field>
+        <field name = "view_mode">tree,form,calendar</field>
         <field name = "help" type= "html">
             <p class="oe_view_nocontent_create">Insertar entidades</p>
         </field>
@@ -135,6 +135,10 @@
                 <field name="client_id" />
                 <label for="langs_ids" string="Languages: " />
                 <field name="langs_ids" />
+                <label for="fecha_inicio" string="Fecha inicio: " />
+                <field name="fecha_inicio" />
+                <label for="fecha_fin" string="Fecha fin: " />
+                <field name="fecha_fin" />
             </form>
         </field>
     </record>
@@ -146,7 +150,18 @@
                 <field name="name"/>
                 <field name="client_id" />
                 <field name="langs_ids" />
+                <field name="fecha_inicio" />
+                <field name="fecha_fin" />
             </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="proyect_calendar_view">
+        <field name="name">proyect.calendar</field>
+        <field name="model">softonic.proyect</field>
+        <field name="arch" type="xml">
+            <calendar string="proyect Calendar" date_start="fecha_inicio" date_stop="fecha_fin">
+                <field name="fecha_fin"/>
+            </calendar>
         </field>
     </record>
      <!-- Team -->
